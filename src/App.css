@@ -11,7 +11,6 @@ body {
 }
 header {
   font-size: 2rem;
-  /* color: black; */
   background: linear-gradient(black, red);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -67,7 +66,7 @@ form button:hover {
   transition: all 1s ease;
 }
 .filter-todo {
-  padding: 1rem;
+  padding: 0.5rem;
 }
 .todo li {
   flex: 1;
@@ -123,6 +122,7 @@ select {
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   width: 12rem;
+  height: 38px;
 }
 .select::after {
   content: "\25BC";
@@ -133,4 +133,43 @@ select {
   background: #ff6f47;
   cursor: pointer;
   pointer-events: none;
+}
+@media only screen and (max-width: 600px) {
+  header {
+    font-size: 1.5rem;
+  }
+  #icon {
+    font-size: 2.5rem;
+    padding: 4px;
+    margin-right: 2px;
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  select {
+    font-size: 12px;
+  }
+  .select {
+    width: 10rem;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  form input {
+    width: 12rem;
+    font-size: 15px;
+  }
+  form button {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  body {
+    margin: 4px;
+    padding: 2px;
+    display: flex;
+  }
 }
